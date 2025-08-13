@@ -1,0 +1,30 @@
+stages:
+  - build
+  - run
+
+variables:
+  IMAGE_NAME: simple-html-server
+
+# Build the Docker image
+build-image:
+  stage: build
+  image: docker:latest
+  services:
+    - docker:dind
+  script:
+    - docker build -t $IMAGE_NAME .
+    - docker images
+  tags:
+    - docker  # This must match your GitLab runner's tag that supports Docker
+
+# Run the container
+run-container:
+  stage: run
+  image: docker:latest
+  services:
+    - docker:dind
+  script:
+    - docker run -d -p 7000:7000 $IMAGE_NAME
+    - echo "Container started. Access at http://<runner-ip>:7000"
+  tags:
+    - docker
