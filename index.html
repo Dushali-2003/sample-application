@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple HTML + CSS Page</title>
+  <style>
+    body {
+      background-color: #f4f4f9;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #333;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 50px auto;
+      background: #fff;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+    }
+
+    p {
+      margin-bottom: 20px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 14px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to My Dockerized Web Page</h1>
+    
+    <p>
+      This simple HTML page is running inside a Docker container using Python’s built-in HTTP server. Docker makes it easy to package and deploy applications across different environments with minimal setup.
+    </p>
+
+    <p>
+      You can use this kind of setup for quick prototyping, learning web basics, or even preparing static documentation for your projects. With Docker, all dependencies and configurations are isolated from your local system.
+    </p>
+
+    <p>
+      The HTML and CSS here are basic, but you can easily expand this to include JavaScript, external stylesheets, images, and more. All you need to do is copy them into your container and serve them with the same method.
+    </p>
+
+    <p>
+      This approach is also a good first step toward containerizing more complex web apps using frameworks like Flask, Django, or even full stacks like Node.js or React.
+    </p>
+
+    <footer>
+      &copy; 2025 Your Name. Built with 💻 and Docker.
+    </footer>
+  </div>
+</body>
+</html>
